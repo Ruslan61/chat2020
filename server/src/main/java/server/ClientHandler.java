@@ -33,8 +33,8 @@ public class ClientHandler {
                             String[] token = str.split(" ");
                             boolean b = server
                                     .getAuthService()
-                                    .registration(token[1],token[2], token[3]);
-                            if(b){
+                                    .registration(token[1], token[2], token[3]);
+                            if (b) {
                                 sendMsg("Регистрация прошла успешно");
                             } else {
                                 sendMsg("Пользователь не может быть зарегистрирован");
@@ -88,13 +88,13 @@ public class ClientHandler {
                                 }
                             }
 
-                            if (str.startsWith("/chnick ")){
+                            if (str.startsWith("/chnick ")) {
                                 String[] token = str.split(" ", 2);
-                                if (token[1].contains(" ")){
+                                if (token[1].contains(" ")) {
                                     sendMsg("Ник не может содержать пробелов");
                                     continue;
                                 }
-                                if (server.getAuthService().changeNick(this.nick, token[1])){
+                                if (server.getAuthService().changeNick(this.nick, token[1])) {
                                     sendMsg("/yournicks " + token[1]);
                                     sendMsg("Ваш ник изменен на " + token[1]);
                                     this.nick = token[1];
