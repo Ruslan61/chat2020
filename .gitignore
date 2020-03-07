@@ -1,6 +1,5 @@
 # Project exclude paths
 /.idea
 *.iml
-*.db
 /client/target
-server/target
+/server/target
