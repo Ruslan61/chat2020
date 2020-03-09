@@ -133,7 +133,7 @@ public class Controller implements Initializable {
                                 });
                             }
 
-                            if (str.startsWith("/yournickis ")) {
+                            if (str.startsWith("/yournicks ")) {
                                 nickname = str.split(" ")[1];
                                 setTitle("chat2020 : " + nickname);
                             }
