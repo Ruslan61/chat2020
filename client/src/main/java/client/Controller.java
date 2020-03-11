@@ -114,7 +114,6 @@ public class Controller implements Initializable {
                             textArea.clear();
                             textArea.appendText(History.getLast100LinesOfHistory(login));
                             History.start(login);
-
                             break;
                         }
                         textArea.appendText(str + "\n");
